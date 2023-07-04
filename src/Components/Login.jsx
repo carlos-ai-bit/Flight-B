@@ -1,12 +1,14 @@
 // import SignUp from "./SignUp";
 // import React, { useState } from "react";
 // import { useNavigate } from "react-router-dom";
-// const Login = () => {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const navigate = useNavigate();
-// };
 function Login() {
+  // {
+  //   const Login = () => {
+  //     const [] = useState("");
+  //     const [] = useState("");
+  //     const navigate = useNavigate();
+  //   };
+  // }
   return (
     <div className="text-center min-h-screen p-7 items-center">
       <h1 className=" font-semibold text-center">It is time to fly</h1>
@@ -21,7 +23,6 @@ function Login() {
           className=" text-center font-semibold flex items-start mb-6 border-solid border-2 border-sky-300 rounded-full"
           type="password"
           placeholder="password"
-         
         />
       </div>
       <div>
@@ -32,7 +33,6 @@ function Login() {
           Login
         </button>
         <div>
-          
           <h1>
             Dont have an account{" "}
             <a className="mr-4 hover:underline md:mr-6 " href="">

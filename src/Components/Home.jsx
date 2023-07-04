@@ -25,7 +25,7 @@ export default function Home() {
           alt="flight-img"
           title=""
         />
-      </div>
+      </div><hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
         {/* <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
 
@@ -52,7 +52,7 @@ export default function Home() {
             <h1>3 Adults - 2 Childs</h1>
           </div>
           <div>
-            <button className="cursor-pointer mt-3 text-black bg-orange-700 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-orange-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 ">
+            <button className=" cursor-pointer mt-3 text-black bg-orange-700 hover:bg-orange-800 focus:outline-none focus:ring-4 focus:ring-orange-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-orange-600 dark:hover:bg-orange-700 ">
               Search
             </button>
           </div>
