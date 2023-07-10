@@ -1,41 +1,66 @@
-// import SignUp from "./SignUp";
 // import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-function Login() {
-  // {
-  //   const Login = () => {
-  //     const [] = useState("");
-  //     const [] = useState("");
-  //     const navigate = useNavigate();
-  //   };
-  // }
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ email, password });
+    setPassword("");
+    setEmail("");
+  };
+  const navigate = useNavigate();
+  function navigateHome() {
+    navigate("/Home");
+  }
+  function navigateSignUP() {
+    navigate("/SignUp");
+  }
   return (
-    <div className="text-center min-h-screen p-7 items-center">
+    <div className="bg-gray-400 text-center min-h-screen p-7 items-center">
       <h1 className=" font-semibold text-center">It is time to fly</h1>
       <h1 className="mt-8 font-semibold ">Login</h1>
       <div className="flex flex-wrap items-center justify-center">
         <input
-          className=" text-center font-semibold flex justify-center mb-6 border-solid border-2 border-sky-300 rounded-full "
+          onSubmit={handleSubmit}
+          className=" text-center flex justify-center mb-6 border-solid border-2 border-sky-300 rounded-full "
           type="text"
+          id="email"
+          name="email"
+          value={email}
+          required
           placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
-          className=" text-center font-semibold flex items-start mb-6 border-solid border-2 border-sky-300 rounded-full"
           type="password"
+          name="password"
+          id="password"
+          minLength={8}
+          required
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className=" text-center flex items-start mb-6 border-solid border-2 border-sky-300 rounded-full"
           placeholder="password"
         />
       </div>
       <div>
         <button
-          type="button"
-          className="cursor-pointer mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="submit"
+          onClick={navigateHome}
+          className="cursor-pointer mt-3 text-white bg-blue-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600"
         >
           Login
         </button>
         <div>
           <h1>
             Dont have an account{" "}
-            <a className="mr-4 hover:underline md:mr-6 " href="">
+            <a
+              className="mr-4 hover:underline md:mr-6 "
+              href="#"
+              onClick={navigateSignUP}
+            >
               {" "}
               Sign Up
             </a>
@@ -44,6 +69,6 @@ function Login() {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

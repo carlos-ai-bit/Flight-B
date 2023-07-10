@@ -4,18 +4,91 @@ const Payment = () => {
   return (
     <div>
       <section>
-        <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
+        <div className="bg-teal-300 mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
           <p className="">Card Number</p>
-          <h2>Enter the 16 digit card number on he card</h2>
-          <div>
-            
-          </div>
-          <div>
+          <p>
+            Enter the 16 digit card number on he card{" "}
             <input
-              className=" text-center font-semibold flex justify-center mb-6 border-solid border-2 border-sky-300 rounded-full "
+              className="ml-2 text-center mb-2 border-solid border-2 border-sky-600 rounded-full "
               type="text"
               placeholder=""
             ></input>
+          </p>
+          <p>
+            Full Name
+            <input
+              placeholder="Enter Cardholder Name"
+              className="ml-3 text-center mb-2  border-2 border-sky-600 rounded-full"
+            ></input>
+          </p>
+          <p>
+            CVV Number{" "}
+            <input
+              placeholder="Enter the 3 digit on application"
+              className="ml-2 text-center mb-2 border-solid border-2 border-sky-600 rounded-full"
+            ></input>
+          </p>
+          <p>
+            Expiry Date{" "}
+            <input
+              placeholder=""
+              className="p-autO text-center mb-2 border-solid border-2 border-sky-600 rounded-full"
+            ></input>
+            <input
+              placeholder=""
+              className="ml-1 text-center mb-2 border-solid border-2 border-sky-600 rounded-full"
+            ></input>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
+          <div className="bg-blue-600 mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
+            <p>
+              {" "}
+              <input
+                placeholder="passengers name"
+                className="mt-4 ml-12 text-center mb-2 border-solid border-2 border-sky-600 rounded-full"
+              ></input>
+            </p>
+            <p>
+              {" "}
+              <input
+                placeholder="payment details"
+                className="mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
+              ></input>
+            </p>
+          </div>
+          <div>
+            <input
+              placeholder="Destination and ticket number"
+              className="mt-4 py-9 ml-12 text-center border-solid border-2 border-sky-600 rounded-full"
+            ></input>
+          </div>
+          <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-900"></hr>
+          <div className="h-auto max-w-lg text-center mb-4">
+            <input
+              className="rounded-md border-2 border-sky-600"
+              placeholder="///"
+            ></input>
+            <input
+              className="rounded-md border-2 border-sky-600"
+              placeholder="Total"
+            ></input>
+            <input
+              className="rounded-md border-2 border-sky-600"
+              placeholder="Total"
+            ></input>
+            <input
+              className="rounded-md border-2 border-sky-600"
+              placeholder="Passenger"
+            ></input>
+          </div>
+          <div className="text-center">
+            {" "}
+            <button className="cursor-pointer mt-3 text-white bg-700 font-medium rounded-md text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-orange-600">
+              Confirm Payment{" "}
+            </button>
           </div>
         </div>
       </section>

@@ -3,10 +3,13 @@ export const TicketConfirmation = () => {
     <div>
       <section>
         {" "}
-        <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
+        <div className="bg-gray-800 mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
           <div className="mb-4 text-center">
             {" "}
-            <input className="rounded-md" placeholder="Flight Status"></input>
+            <input
+              className="rounded-md mt-2"
+              placeholder="Flight Status"
+            ></input>
           </div>
           <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-900"></hr>
           <div className="mb-4 text-center">
@@ -23,7 +26,7 @@ export const TicketConfirmation = () => {
               Flight Details
             </button>
           </div>
-          <div className="h-auto max-w-lg ml-auto text-center  mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
+          <div className=" bg-gray-500 h-auto max-w-lg ml-auto text-center  mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
             <div className="text-center">
               <p>Booking Details</p>
               <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-900"></hr>
@@ -36,24 +39,48 @@ export const TicketConfirmation = () => {
             </div>
 
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-900"></hr>
-            <div className="h-auto max-w-lg ml-auto text-center  mb-4">
+            <div className="h-auto max-w-lg ml-auto text-center mb-4 ">
               {" "}
-              <input className="rounded-md" placeholder="Airlines"></input>
-              <input className="rounded-md" placeholder="Flight"></input>
-              <input className="rounded-md" placeholder="Flight Class"></input>
-              <input className="rounded-md" placeholder="Passenger"></input>
+              <input
+                className="rounded-md border-sky-600 border-2"
+                placeholder="Airlines"
+              ></input>
+              <input
+                className="rounded-md border-sky-600 border-2"
+                placeholder="Flight"
+              ></input>
+              <input
+                className="rounded-md border-sky-600 border-2"
+                placeholder="Flight Class"
+              ></input>
+              <input
+                className="rounded-md border-sky-600 border-2"
+                placeholder="Passenger"
+              ></input>
             </div>
           </div>
           <div className="h-auto max-w-lg ml-auto text-center  mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
-            <div className="text-center">
+            <div className=" bg-gray-500 text-center">
               <p>Price Details</p>
               <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-900"></hr>
-              <div className="h-auto max-w-lg ml-auto text-center  mb-4">
+              <div className=" h-auto max-w-lg ml-auto text-center mb-4">
                 {" "}
-                <input className="rounded-md" placeholder="///"></input>
-                <input className="rounded-md" placeholder="Total"></input>
-                <input className="rounded-md" placeholder="Total"></input>
-                <input className="rounded-md" placeholder="Passenger"></input>
+                <input
+                  className="rounded-md border-sky-600 border-2"
+                  placeholder="///"
+                ></input>
+                <input
+                  className="rounded-md border-sky-600 border-2"
+                  placeholder="Total"
+                ></input>
+                <input
+                  className="rounded-md border-sky-600 border-2"
+                  placeholder="Total"
+                ></input>
+                <input
+                  className="rounded-md border-sky-600 border-2"
+                  placeholder="Passenger"
+                ></input>
                 <div className="text-center">
                   {" "}
                   <button className="cursor-pointer mt-3 text-white bg-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-orange-600">

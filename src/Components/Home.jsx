@@ -1,6 +1,6 @@
 // import React from "react";
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="">
       <ul className="flex flex-wrap items-center justify-center mb-6">
@@ -25,7 +25,8 @@ export default function Home() {
           alt="flight-img"
           title=""
         />
-      </div><hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      </div>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
         {/* <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
 
@@ -60,4 +61,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;
