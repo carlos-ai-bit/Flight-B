@@ -1,18 +1,37 @@
 // import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 const SignUp = () => {
+  const SignUp = () => {
+    useEffect(() => {
+      fetch("http://localhost:3000/users", { method: "POST", headers: {} })
+        .then((response) => response.json)
+        .then((data) => data)
+        .catch((err) => console.log(err));
+    }, []);
+  };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstname, setFirstname] = useState("");
   const [secondname, setSecondname] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    SignUp("");
+
+    setEmail("");
+
+    setPassword("");
+    console.log(`already a user`);
+  };
+
   const navigate = useNavigate();
   function navigateHome() {
     navigate("/Home");
   }
   return (
     <div>
-      <form className="text-center ">
+      <form className="text-center" onSubmit={handleSubmit}>
         <div className="mt-7 ">
           <input
             type="firstname"
@@ -63,6 +82,7 @@ const SignUp = () => {
             placeholder="Enter your 8 digit password  "
           ></input>
           <button
+            onSubmit={handleSubmit}
             type="submit"
             onClick={navigateHome}
             className="flex-col justify-center cursor-pointer  mt-3 text-white bg-blue-700 hover:bg-blue-800 focus:outline-none   font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600"

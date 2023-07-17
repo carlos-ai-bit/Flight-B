@@ -1,4 +1,10 @@
-export const TicketConfirmation = () => {
+// import React from 'react'
+import { useNavigate } from "react-router-dom";
+const TicketConfirmation = () => {
+  const navigate = useNavigate();
+  function navigatePayment() {
+    navigate("/Payment");
+  }
   return (
     <div>
       <section>
@@ -83,7 +89,10 @@ export const TicketConfirmation = () => {
                 ></input>
                 <div className="text-center">
                   {" "}
-                  <button className="cursor-pointer mt-3 text-white bg-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-orange-600">
+                  <button
+                    onClick={navigatePayment}
+                    className="cursor-pointer mt-3 text-white bg-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-orange-600"
+                  >
                     Continue Booking{" "}
                   </button>
                 </div>
@@ -95,3 +104,5 @@ export const TicketConfirmation = () => {
     </div>
   );
 };
+
+export default TicketConfirmation;

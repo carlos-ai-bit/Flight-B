@@ -1,14 +1,28 @@
 // import React, { useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+// import user from "../../userdb.json";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/users", {
+      method: "GET",
+      headers: {},
+    })
+      .then((response) => response.json)
+      .then((data) => setUsers(data))
+      .catch((err) => console.log(err));
+  }, []);
+  console.log(setUsers);
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ email, password });
     setPassword("");
     setEmail("");
+    console.log(`successfuly signed${users}`);
   };
   const navigate = useNavigate();
   function navigateHome() {
@@ -17,6 +31,7 @@ const Login = () => {
   function navigateSignUP() {
     navigate("/SignUp");
   }
+
   return (
     <div className="bg-gray-400 text-center min-h-screen p-7 items-center">
       <h1 className=" font-semibold text-center">It is time to fly</h1>
