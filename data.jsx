@@ -24,7 +24,7 @@ export const data = [
     price: 849.09,
   },
   {
-    flight_number: 2693,
+    flight_number: 2690,
     airline: "American",
     departure_airport: "HOY",
     arrival_airport: "PAP",
@@ -48,7 +48,7 @@ export const data = [
     price: 608.46,
   },
   {
-    flight_number: 9225,
+    flight_number: 9025,
     airline: "American",
     departure_airport: "UEO",
     arrival_airport: "TJA",
@@ -72,7 +72,7 @@ export const data = [
     price: 372.49,
   },
   {
-    flight_number: 3921,
+    flight_number: 3121,
     airline: "American",
     departure_airport: "TBS",
     arrival_airport: "MYR",
@@ -96,7 +96,7 @@ export const data = [
     price: 796.83,
   },
   {
-    flight_number: 3319,
+    flight_number: 1319,
     airline: "Delta",
     departure_airport: "LMO",
     arrival_airport: "MFZ",
@@ -120,7 +120,7 @@ export const data = [
     price: 526.82,
   },
   {
-    flight_number: 762,
+    flight_number: 7723,
     airline: "Delta",
     departure_airport: "MGH",
     arrival_airport: "ZUH",
@@ -132,7 +132,7 @@ export const data = [
     price: 367.87,
   },
   {
-    flight_number: 901,
+    flight_number: 9010,
     airline: "American",
     departure_airport: "CGC",
     arrival_airport: "TSW",
@@ -144,7 +144,7 @@ export const data = [
     price: 83.72,
   },
   {
-    flight_number: 7811,
+    flight_number: 7810,
     airline: "United",
     departure_airport: "TUS",
     arrival_airport: "MPK",
@@ -240,7 +240,7 @@ export const data = [
     price: 404.46,
   },
   {
-    flight_number: 9339,
+    flight_number: 9330,
     airline: "American",
     departure_airport: "LHK",
     arrival_airport: "DLK",
@@ -276,7 +276,7 @@ export const data = [
     price: 865.97,
   },
   {
-    flight_number: 7649,
+    flight_number: 76499,
     airline: "United",
     departure_airport: "JDO",
     arrival_airport: "WLO",
@@ -336,7 +336,7 @@ export const data = [
     price: 408.67,
   },
   {
-    flight_number: 4568,
+    flight_number: 4569,
     airline: "United",
     departure_airport: "YXZ",
     arrival_airport: "ZHY",
@@ -347,18 +347,7 @@ export const data = [
     duration_minutes: 328,
     price: 930.84,
   },
-  {
-    flight_number: 6193,
-    airline: "American",
-    departure_airport: "LQK",
-    arrival_airport: "MWT",
-    departure_date: "7/22/2022",
-    arrival_date: "5/21/2022",
-    departure_time: "3:01 AM",
-    arrival_time: "10:10 PM",
-    duration_minutes: 106,
-    price: 322.59,
-  },
+
   {
     flight_number: 3119,
     airline: "American",
@@ -371,20 +360,9 @@ export const data = [
     duration_minutes: 106,
     price: 302.59,
   },
+
   {
-    flight_number: 3315,
-    airline: "American",
-    departure_airport: "TWA",
-    arrival_airport: "TMH",
-    departure_date: "5/17/2022",
-    arrival_date: "6/13/2022",
-    departure_time: "2:01 AM",
-    arrival_time: "10:51 PM",
-    duration_minutes: 487,
-    price: 884.59,
-  },
-  {
-    flight_number: 3800,
+    flight_number: 3890,
     airline: "Delta",
     departure_airport: "VCR",
     arrival_airport: "KIR",
@@ -408,7 +386,7 @@ export const data = [
     price: 384.47,
   },
   {
-    flight_number: 4018,
+    flight_number: 4518,
     airline: "American",
     departure_airport: "EMS",
     arrival_airport: "XBE",
@@ -432,7 +410,7 @@ export const data = [
     price: 528.65,
   },
   {
-    flight_number: 8726,
+    flight_number: 8723,
     airline: "United",
     departure_airport: "KPL",
     arrival_airport: "HMO",
@@ -456,7 +434,7 @@ export const data = [
     price: 733.17,
   },
   {
-    flight_number: 6949,
+    flight_number: 6989,
     airline: "United",
     departure_airport: "ETZ",
     arrival_airport: "IXK",
@@ -480,7 +458,7 @@ export const data = [
     price: 139.15,
   },
   {
-    flight_number: 3072,
+    flight_number: 3572,
     airline: "United",
     departure_airport: "BUG",
     arrival_airport: "IDK",
@@ -492,7 +470,7 @@ export const data = [
     price: 526.82,
   },
   {
-    flight_number: 762,
+    flight_number: 7920,
     airline: "Delta",
     departure_airport: "MGH",
     arrival_airport: "ZUH",
@@ -528,7 +506,7 @@ export const data = [
     price: 833.83,
   },
   {
-    flight_number: 2798,
+    flight_number: 2098,
     airline: "Delta",
     departure_airport: "SXQ",
     arrival_airport: "YZF",
@@ -540,7 +518,7 @@ export const data = [
     price: 467.89,
   },
   {
-    flight_number: 1967,
+    flight_number: 1567,
     airline: "American",
     departure_airport: "TYE",
     arrival_airport: "INJ",
@@ -552,7 +530,7 @@ export const data = [
     price: 466.07,
   },
   {
-    flight_number: 7842,
+    flight_number: 784,
     airline: "United",
     departure_airport: "LAZ",
     arrival_airport: "ATV",
@@ -564,7 +542,7 @@ export const data = [
     price: 136.47,
   },
   {
-    flight_number: 2541,
+    flight_number: 2545,
     airline: "American",
     departure_airport: "QOQ",
     arrival_airport: "SYB",
@@ -576,7 +554,7 @@ export const data = [
     price: 264.56,
   },
   {
-    flight_number: 7847,
+    flight_number: 7843,
     airline: "United",
     departure_airport: "LPC",
     arrival_airport: "CVM",
@@ -588,7 +566,7 @@ export const data = [
     price: 392.09,
   },
   {
-    flight_number: 1749,
+    flight_number: 1740,
     airline: "American",
     departure_airport: "KLB",
     arrival_airport: "HBE",
@@ -600,7 +578,7 @@ export const data = [
     price: 378.73,
   },
   {
-    flight_number: 4055,
+    flight_number: 4051,
     airline: "Delta",
     departure_airport: "THB",
     arrival_airport: "BBO",
@@ -612,7 +590,7 @@ export const data = [
     price: 404.46,
   },
   {
-    flight_number: 9339,
+    flight_number: 93399,
     airline: "American",
     departure_airport: "LHK",
     arrival_airport: "DLK",
@@ -624,7 +602,7 @@ export const data = [
     price: 875.42,
   },
   {
-    flight_number: 9660,
+    flight_number: 96601,
     airline: "Delta",
     departure_airport: "WUM",
     arrival_airport: "TPN",
@@ -636,7 +614,7 @@ export const data = [
     price: 346.62,
   },
   {
-    flight_number: 2669,
+    flight_number: 26690,
     airline: "United",
     departure_airport: "YZA",
     arrival_airport: "BTZ",
@@ -660,7 +638,7 @@ export const data = [
     price: 182.09,
   },
   {
-    flight_number: 399,
+    flight_number: 3990,
     airline: "United",
     departure_airport: "CEN",
     arrival_airport: "BOK",
@@ -672,7 +650,7 @@ export const data = [
     price: 51.17,
   },
   {
-    flight_number: 9214,
+    flight_number: 9213,
     airline: "United",
     departure_airport: "TMO",
     arrival_airport: "BNY",
@@ -684,7 +662,7 @@ export const data = [
     price: 728.03,
   },
   {
-    flight_number: 1611,
+    flight_number: 1610,
     airline: "Delta",
     departure_airport: "PMW",
     arrival_airport: "GNN",
@@ -696,7 +674,7 @@ export const data = [
     price: 790.19,
   },
   {
-    flight_number: 2076,
+    flight_number: 2077,
     airline: "Delta",
     departure_airport: "GUF",
     arrival_airport: "HOC",
@@ -888,7 +866,7 @@ export const data = [
     duration_minutes: 713.4,
   },
   {
-    flight_number: 8762,
+    flight_number: 8760,
     departure_airport: "XLU",
     arrival_airport: "MUA",
     departure_date: "11/2/2022",

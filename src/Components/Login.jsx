@@ -36,30 +36,33 @@ const Login = () => {
     <div className="bg-gray-400 text-center min-h-screen p-7 items-center">
       <h1 className=" font-semibold text-center">It is time to fly</h1>
       <h1 className="mt-8 font-semibold ">Login</h1>
-      <div className="flex flex-wrap items-center justify-center">
-        <input
-          onSubmit={handleSubmit}
-          className=" text-center flex justify-center mb-6 border-solid border-2 border-sky-300 rounded-full "
-          type="text"
-          id="email"
-          name="email"
-          value={email}
-          required
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          minLength={8}
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className=" text-center flex items-start mb-6 border-solid border-2 border-sky-300 rounded-full"
-          placeholder="password"
-        />
-      </div>
+      <form action="" onSubmit={handleSubmit}>
+        {" "}
+        <div className="flex flex-wrap items-center justify-center">
+          <input
+            onSubmit={handleSubmit}
+            className=" text-center flex justify-center mb-6 border-solid border-2 border-sky-300 rounded-full "
+            type="text"
+            id="email"
+            name="email"
+            value={email}
+            required
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            minLength={8}
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className=" text-center flex items-start mb-6 border-solid border-2 border-sky-300 rounded-full"
+            placeholder="password"
+          />
+        </div>
+      </form>
       <div>
         <button
           type="submit"

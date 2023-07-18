@@ -8,21 +8,7 @@ const Home = () => {
     e.preventDefault();
     console.log("submited", search);
   }
-  // const [details, setDetails] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://localhost:3000/plane_details", {
-  //     method: "GET",
-  //     headers: {},
-  //   })
-  //     .then((response) => response.json)
-  //     .then((data) => setDetails(data.details))
-  //     .catch((err) => console.log(err));
-  // }, []);
-  // console.log(setDetails);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(`successfuly signed${details}`);
-  // };
+
   const [search, setSearch] = useState("");
   console.log(data);
   return (
@@ -52,18 +38,9 @@ const Home = () => {
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
-        {/* <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr> */}
-
         <section>
-          {/* <div className="text-center">
-            <input
-              name="search"
-              className="text-center mt-4 fon  rounded-md border-sky-700 border-2"
-              placeholder="Search Flight "
-            ></input>
-          </div> */}
           <div>
-            <form className="text-center" onSubmit={searchForm}>
+            <form className="text-center m-6" onSubmit={searchForm}>
               {" "}
               <input
                 onChange={(e) => setSearch(e.target.value)}
@@ -72,9 +49,9 @@ const Home = () => {
                 placeholder="Search Flight"
               ></input>
             </form>{" "}
-            <table className="">
+            <table className="border border-gray-300 w-full p-2 rounded">
               <thead>
-                <tr>
+                <tr className="border border-gray-400 p-2 rounded  text-center">
                   <th>Flight number</th>
                   <th>Airline</th>
                   <th>Departure airport</th>
@@ -87,56 +64,28 @@ const Home = () => {
                   <th>Price</th>
                 </tr>
               </thead>
-              <tbody>
-                {data.map((item) => (
-                  <tr key={item.flight_number}>
-                    <td>{item.flight_number}</td>
-                    <td>{item.airline}</td>
-                    <td>{item.departure_airport}</td>
-                    <td>{item.arrival_airport}</td>
-                    <td>{item.departure_date}</td>
-                    <td>{item.arrival_date}</td>
-                    <td>{item.departure_time}</td>
-                    <td>{item.arrival_time}</td>
-                    <td>{item.duration_minutes}</td>
-                    <td>{item.price}</td>
-                  </tr>
-                ))}
+              <tbody className="border border-gray-400 p-2 rounded  text-center">
+                {data
+                  .filter((allItem) =>
+                    allItem.flight_number.toString().includes(search)
+                  )
+                  .map((item) => (
+                    <tr key={item.flight_number}>
+                      <td>{item.flight_number}</td>
+                      <td>{item.airline}</td>
+                      <td>{item.departure_airport}</td>
+                      <td>{item.arrival_airport}</td>
+                      <td>{item.departure_date}</td>
+                      <td>{item.arrival_date}</td>
+                      <td>{item.departure_time}</td>
+                      <td>{item.arrival_time}</td>
+                      <td>{item.duration_minutes}</td>
+                      <td>{item.price}</td>
+                    </tr>
+                  ))}
               </tbody>
             </table>
           </div>
-
-          {/* <div className="text-center">
-            {" "}
-            <input
-              name="search"
-              placeholder="Flight details"
-              className=" border-2 mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
-            ></input>{" "}
-            <input
-              name="search"
-              placeholder="Flight details"
-              className=" border-2 mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
-            ></input>{" "}
-            <input
-              name="search"
-              placeholder="Flight details"
-              className=" border-2 mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
-            ></input>
-          </div> */}
-          {/* <hr className="w-48 h-1 mr-auto my-4 bg-gray-100 rounded-full md:my-10 dark:bg-gray-600"></hr> */}
-
-          {/* <div className="text-center">
-            <button
-              onSubmit={handleSubmit}
-              onChange={(e) => setDetails(e.target.value)}
-              value={details}
-              type="submit"
-              className="cursor-pointer mt-3 text-black bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
-            >
-              Search
-            </button>
-          </div> */}
         </section>
       </div>
     </div>
@@ -161,3 +110,67 @@ export default Home;
 // <h1>Passenger</h1>
 // <h1>3 Adults - 2 Childs</h1>
 // </div>
+// const [details, setDetails] = useState([]);
+// useEffect(() => {
+//   fetch("http://localhost:3000/plane_details", {
+//     method: "GET",
+//     headers: {},
+//   })
+//     .then((response) => response.json)
+//     .then((data) => setDetails(data.details))
+//     .catch((err) => console.log(err));
+// }, []);
+// console.log(setDetails);
+// const handleSubmit = (e) => {
+//   e.preventDefault();
+//   console.log(`successfuly signed${details}`);
+// };
+{
+  /* <div className="text-center">
+            {" "}
+            <input
+              name="search"
+              placeholder="Flight details"
+              className=" border-2 mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
+            ></input>{" "}
+            <input
+              name="search"
+              placeholder="Flight details"
+              className=" border-2 mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
+            ></input>{" "}
+            <input
+              name="search"
+              placeholder="Flight details"
+              className=" border-2 mt-4 py-9 ml-12 text-center mb-2 border-solid  border-sky-600 rounded-full"
+            ></input>
+          </div> */
+}
+{
+  /* <hr className="w-48 h-1 mr-auto my-4 bg-gray-100 rounded-full md:my-10 dark:bg-gray-600"></hr> */
+}
+
+{
+  /* <div className="text-center">
+            <button
+              onSubmit={handleSubmit}
+              onChange={(e) => setDetails(e.target.value)}
+              value={details}
+              type="submit"
+              className="cursor-pointer mt-3 text-black bg-orange-500 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            >
+              Search
+            </button>
+          </div> */
+}
+{
+  /* <div className="text-center">
+            <input
+              name="search"
+              className="text-center mt-4 fon  rounded-md border-sky-700 border-2"
+              placeholder="Search Flight "
+            ></input>
+          </div> */
+}
+{
+  /* <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr> */
+}
