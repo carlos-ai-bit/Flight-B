@@ -2,15 +2,53 @@
 // import { useEffect, useState } from "react";
 import { useState } from "react";
 import { data } from "/data.jsx";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   function searchForm(e) {
     e.preventDefault();
     console.log("submited", search);
   }
-
+  const navigate = useNavigate();
+  function navigateTicket() {
+    navigate("/Ticket");
+  }
   const [search, setSearch] = useState("");
   console.log(data);
+
+  function addTicket(
+    flight_number,
+    airline,
+    departure_airport,
+    arrival_airport,
+    departure_date,
+    arrival_date,
+    departure_time,
+    arrival_time,
+    duration_minutes,
+    price
+  ) {
+    // Create a new ticket object.
+    const ticket = {
+      flight_number,
+      airline,
+      departure_airport,
+      arrival_airport,
+      departure_date,
+      arrival_date,
+      departure_time,
+      arrival_time,
+      duration_minutes,
+      price,
+    };
+    ticket.slice(ticket);
+    window.location.href = "ticketdata";
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(addTicket);
+  };
   return (
     <div className="bg-sky-300">
       <ul className="flex flex-wrap items-center justify-center mb-6">
@@ -37,7 +75,7 @@ const Home = () => {
         />
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-      <div className=" mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
+      <div className="mt-8 shadow mx-8 mb-4 border flex flex-col justify-center item-center">
         <section>
           <div>
             <form className="text-center m-6" onSubmit={searchForm}>
@@ -48,7 +86,7 @@ const Home = () => {
                 className="text-center mt-4 rounded-md border-sky-700 border-2"
                 placeholder="Search Flight"
               ></input>
-            </form>{" "}
+            </form>
             <table className="border border-gray-300 w-full p-2 rounded">
               <thead>
                 <tr className="border border-gray-400 p-2 rounded  text-center">
@@ -71,8 +109,8 @@ const Home = () => {
                   )
                   .map((item) => (
                     <tr key={item.flight_number}>
-                      <td>{item.flight_number}</td>
-                      <td>{item.airline}</td>
+                      <td>{item.flight_number} </td>
+                      <td>{item.airline} </td>
                       <td>{item.departure_airport}</td>
                       <td>{item.arrival_airport}</td>
                       <td>{item.departure_date}</td>
@@ -80,11 +118,28 @@ const Home = () => {
                       <td>{item.departure_time}</td>
                       <td>{item.arrival_time}</td>
                       <td>{item.duration_minutes}</td>
-                      <td>{item.price}</td>
+                      <td>
+                        {item.price}{" "}
+                        <button
+                          onClick={handleSubmit}
+                          className="bg-red-400 rounded-full px-2 py-2 my-3"
+                        >
+                          Add to Ticket
+                        </button>{" "}
+                      </td>
                     </tr>
                   ))}
               </tbody>
             </table>
+          </div>
+          <div className="text-center">
+            {" "}
+            <button
+              onClick={navigateTicket}
+              className="border-solid border border-black cursor-pointer mt-3 text-blue-900  font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            >
+              Next Page
+            </button>
           </div>
         </section>
       </div>

@@ -78,8 +78,8 @@ const SignUp = () => {
             value={password}
             required
             onChange={(e) => setPassword(e.target.value)}
-            className="cursor-pointer  mt-3 text-center  border-solid border-2 border-sky-300 rounded-full"
-            placeholder="Enter your 8[HTTP/1.1 404 Not Found 0ms] digit password  "
+            className="cursor-pointer mt-3 text-center  border-solid border-2 border-sky-300 rounded-full"
+            placeholder="Enter your 8 digit password  "
           ></input>
           <button
             onSubmit={handleSubmit}

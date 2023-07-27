@@ -6,6 +6,8 @@ import SignUp from "./Components/SignUp";
 import { Ticket } from "./Components/Ticket";
 import TicketConfirmation from "./Components/TicketConfirmation";
 import Payment from "./Components/Payment";
+import { BarcodeScanner } from "./Components/BarcodeScanner";
+import QrCode from "./Components/QrCode";
 function App() {
   return (
     <>
@@ -22,6 +24,8 @@ function App() {
             exact
             Component={TicketConfirmation}
           />
+          <Route path="/BarcodeScanner" exact Component={BarcodeScanner} />
+          <Route path="/QrCode" exact Component={QrCode} />
         </Routes>
       </BrowserRouter>
     </>

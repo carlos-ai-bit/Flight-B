@@ -2,26 +2,31 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-// import user from "../../userdb.json";
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([]);
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState();
+  const [users, fetchUsers] = useState(false);
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/users", {
+
+  //   })
+  //     .then((response) => response.json)
+  //     .then((data) => fetchUsers(data))
+  //     .catch((err) => console.log(err));
+  // }, []);
   useEffect(() => {
-    fetch("http://localhost:3000/users", {
-      method: "GET",
-      headers: {},
-    })
-      .then((response) => response.json)
-      .then((data) => setUsers(data))
-      .catch((err) => console.log(err));
+    fetch("http://localhost:3000/users")
+      .then((res) => res.json())
+      .then((res) => {
+        fetchUsers(res);
+        console.log(res);
+      });
   }, []);
-  console.log(setUsers);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ email, password });
-    setPassword("");
-    setEmail("");
+    // console.log({ email, password });
+    // setPassword("");
+    // setEmail("");
     console.log(`successfuly signed${users}`);
   };
   const navigate = useNavigate();
@@ -45,10 +50,10 @@ const Login = () => {
             type="text"
             id="email"
             name="email"
-            value={email}
+            // value={email}
             required
             placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
+            // onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
@@ -56,35 +61,33 @@ const Login = () => {
             id="password"
             minLength={8}
             required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            // value={password}
+            // onChange={(e) => setPassword(e.target.value)}
             className=" text-center flex items-start mb-6 border-solid border-2 border-sky-300 rounded-full"
             placeholder="password"
           />
         </div>
-      </form>
-      <div>
         <button
           type="submit"
-          onClick={navigateHome}
+          onClick={handleSubmit}
+          onChange={navigateHome}
           className="cursor-pointer mt-3 text-white bg-blue-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600"
         >
           Login
         </button>
-        <div>
-          <h1>
-            Dont have an account{" "}
-            <a
-              className="mr-4 hover:underline md:mr-6 "
-              href="#"
-              onClick={navigateSignUP}
-            >
-              {" "}
-              Sign Up
-            </a>
-          </h1>
-        </div>
-      </div>
+        <h1>
+          Dont have an account{" "}
+          <a
+            className="mr-4 hover:underline md:mr-6 "
+            href="#"
+            onClick={navigateSignUP}
+          >
+            {" "}
+            Sign Up
+          </a>
+        </h1>
+      </form>
+      <div></div>
     </div>
   );
 };
